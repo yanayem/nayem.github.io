@@ -42,7 +42,7 @@ const AboutMe = () => {
                   Get In Touch
                 </button>
                 <a
-                  href="https://1drv.ms/b/c/4b83bb33d9e6a435/EfdPaY6d9DNNqVvgwFWOXzEBC9qSE_9qOoem90fvtXJp5Q?e=sqTJ1U"
+                  href="https://1drv.ms/b/c/4b83bb33d9e6a435/IQBWw2ojxrIESKtgDKn5mPEmAfAc0WLNesMx6HdE3mYrjds?e=I9k1tB"
                   className="px-6 py-2 rounded-full border border-primary text-primary hover:text-fourth hover:brightness-135 transition-colors duration-200"
                 >
                   Download CV

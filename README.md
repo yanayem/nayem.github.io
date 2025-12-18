@@ -1,12 +1,31 @@
-# React + Vite
+# 🎬 Nayem's Portfolio — React + Tailwind
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A cinematic, responsive portfolio built with React and Tailwind CSS. Designed to showcase projects, personality, and purpose with bold visuals and clean code.
 
-Currently, two official plugins are available:
+## 🚀 Live Preview
+[Visit the Portfolio](https://portfolio-react-tailwind-navy.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🧰 Tech Stack
 
-## Expanding the ESLint configuration
+- ⚛️ React
+- 🎨 Tailwind CSS
+- 🧭 React Router (optional)
+- 📦 Vite / CRA (depending on setup)
+- 🖼️ Custom animations & transitions
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📸 Features
+
+- Hero section with intro and call-to-action
+- Projects grid with hover effects
+- About section with personal philosophy
+- Contact form (optional: email integration)
+- Responsive design for all devices
+- Dark mode toggle (if implemented)
+
+## 🛠️ Installation
+
+```bash
+git clone https://github.com/yanayem/Portfolio-react-tailwind
+cd Portfolio-react-tailwind
+npm install
+npm run dev

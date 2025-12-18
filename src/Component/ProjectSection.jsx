@@ -5,9 +5,27 @@ import img2 from "../assets/img_2.png";
 import img3 from "../assets/img_3.png";
 import img4 from "../assets/img_4.png";
 import img5 from "../assets/img_5.png";
+import img6 from "../assets/Screenshot 2025-11-19 010951.png"
+import img7 from "../assets/Screenshot 2025-12-18 212321.png";
 
 const ProjectSection = () => {
   const projects = [
+    {
+      title: "Soil Monitoring",
+      description: "A real-time soil condition monitoring system with dark mode UI and Django backend.",
+      tags: ["Html", "Tailwind", "Dark Mode", "Django", "Sqlite", "Animation"],
+      demoUrl: "https://soil-monitoring.onrender.com/",
+      githubUrl: "https://github.com/yanayem",
+      image: img6,
+    },
+    {
+  title: "Hospital Appointment and Patient Management System",
+  description: "A web-based system for managing hospital appointments, patient records, and doctor scheduling.",
+  tags: ["Html", "Tailwind", "Django", "Sqlite", "Animation"],
+  demoUrl: "https://hospital-appointment-and-patient.onrender.com/",
+  githubUrl: "#",
+  image: img7,
+},
     {
       title: "Pet Shop",
       description:
@@ -107,13 +125,12 @@ const ProjectSection = () => {
             {visibleProjects.map((project, idx) => (
               <div
                 key={idx}
-                className={`rounded-2xl shadow-sm  dark:bg-gray-800 p-5 transition-transform hover:-translate-y-2 ${
-                  slidesPerView === 1
+                className={`rounded-2xl shadow-sm  dark:bg-gray-800 p-5 transition-transform hover:-translate-y-2 ${slidesPerView === 1
                     ? "w-full"
                     : slidesPerView === 2
-                    ? "w-1/2"
-                    : "w-1/3"
-                }`}
+                      ? "w-1/2"
+                      : "w-1/3"
+                  }`}
               >
                 {/* Project Card */}
                 <div className="h-48 overflow-hidden rounded-lg">
@@ -174,45 +191,44 @@ const ProjectSection = () => {
               </div>
             ))}
           </div>
-        
+
 
           {/* Navigation Buttons  outside area*/}
-         
-<button
-  onClick={() =>
-    setCurrentIndex(
-      (prev) => (prev - 1 + projects.length) % projects.length
-    )
-  }
-  className="hidden lg:flex absolute top-1/2 left-1 transform -translate-y-1/2 bg-fifth text-black p-3 rounded-full shadow-lg transition"
->
-  &#10094;
-</button>
-<button
-  onClick={() =>
-    setCurrentIndex((prev) => (prev + 1) % projects.length)
-  }
-  className="hidden lg:flex absolute top-1/2 right-1 transform -translate-y-1/2 bg-fifth text-black p-3 rounded-full shadow-lg transition"
->
-  &#10095;
-</button>
- 
-</div>
+
+          <button
+            onClick={() =>
+              setCurrentIndex(
+                (prev) => (prev - 1 + projects.length) % projects.length
+              )
+            }
+            className="hidden lg:flex absolute top-1/2 left-1 transform -translate-y-1/2 bg-fifth text-black p-3 rounded-full shadow-lg transition"
+          >
+            &#10094;
+          </button>
+          <button
+            onClick={() =>
+              setCurrentIndex((prev) => (prev + 1) % projects.length)
+            }
+            className="hidden lg:flex absolute top-1/2 right-1 transform -translate-y-1/2 bg-fifth text-black p-3 rounded-full shadow-lg transition"
+          >
+            &#10095;
+          </button>
+
+        </div>
         {/* Pagination Dots (outside card area) */}
         <div className="mt-6 flex justify-center space-x-3">
           {Array.from({ length: projects.length }).map((_, idx) => (
             <button
               key={idx}
-              className={`w-4 h-4 rounded-full transition ${
-                idx === currentIndex
+              className={`w-4 h-4 rounded-full transition ${idx === currentIndex
                   ? "bg-primary scale-110"
                   : "bg-fifth hover:bg-gray-400"
-              }`}
+                }`}
               onClick={() => setCurrentIndex(idx)}
             ></button>
           ))}
         </div>
-         <div className="mt-12 text-center">
+        <div className="mt-12 text-center">
           <a
             href="https://github.com/yanayem"
             target="_blank"

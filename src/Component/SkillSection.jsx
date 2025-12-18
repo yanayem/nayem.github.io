@@ -11,15 +11,17 @@ const SkillSection = () => {
     { name: "React", level: 85, category: "frontend" },
     { name: "Bootstrap", level: 80, category: "frontend" },
     { name: "Tailwind CSS", level: 88, category: "frontend" },
-    { name: "Node.js", level: 75, category: "backend" },
-    { name: "Express.js", level: 72, category: "backend" },
-    { name: "MongoDB", level: 70, category: "backend" },
+    { name: "Node.js", level: 65, category: "backend" },
+    { name: "Express.js", level: 25, category: "backend" },
+    { name: "Django", level: 84, category: "backend" },
+    { name: "Mysql", level: 63, category: "backend" },
+    { name: "SQlite", level: 83, category: "backend" },
     { name: "Git/GitHub", level: 85, category: "tools" },
     { name: "VS Code", level: 90, category: "tools" },
     { name: "Figma", level: 78, category: "tools" },
     { name: "C", level: 84, category: "language" },
     { name: "C++", level: 92, category: "language" },
-    { name: "Python", level: 65, category: "language" },
+    { name: "Python", level: 75, category: "language" },
   ];
 
   const categories = ["all", "frontend", "backend", "tools", "language"];
