@@ -13,26 +13,26 @@ import Footer from "../Component/Footer";
 
 const Home = () => {
   return (
-    <div className="relative min-h-screen bg-background text-foreground">
-      {/* Theme Toggle */}
-      <ThemeToggle />
+    <div className="relative min-h-screen bg-background text-foreground transition-colors duration-500">
+      
+      {/* Theme Toggle - Fixed and High Z-Index */}
+      <div className="fixed top-24 right-6 z-[60] md:top-6 md:right-10">
+        <ThemeToggle />
+      </div>
 
-      {/* Background Effects */}
       <StarBackground />
-
-      {/* Navigation Bar */}
       <Navbar />
 
-      {/* Main Sections */}
-      <HeroSection />
-      <AboutMe />
-      <SkillSection />
-      <SeviceArea />
-      <ProjectSection />
-      <ContactSection />
-      <Footer />
+      <main>
+        <HeroSection />
+        <AboutMe />
+        <SkillSection />
+        <SeviceArea />
+        <ProjectSection />
+        <ContactSection />
+      </main>
 
-      {/* Scroll to Top Button */}
+      <Footer />
       <ScrollToTop />
     </div>
   );
