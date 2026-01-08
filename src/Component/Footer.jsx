@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer 
       id="footer" 
-      className="relative overflow-hidden border-t border-white/10 bg-white/5 dark:bg-black/20 backdrop-blur-xl py-8 px-6 transition-all duration-300"
+      className="relative overflow-hidden border-t dark:border-whilte/10 border-gray-400 bg-gray-100 dark:bg-black/20 backdrop-blur-xl py-8 px-6 transition-all duration-300"
     >
       {/* Subtle background glow to make the glass effect visible */}
       <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-64 h-24 bg-primary/10 blur-[80px] pointer-events-none" />

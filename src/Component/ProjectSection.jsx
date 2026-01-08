@@ -6,26 +6,89 @@ import img3 from "../assets/img_3.png";
 import img4 from "../assets/img_4.png";
 import img5 from "../assets/img_5.png";
 import img6 from "../assets/Screenshot 2025-11-19 010951.png"
-import img7 from "../assets/Screenshot 2025-12-18 212321.png";
+import img7 from "../assets/hms.png";
+import img8 from "../assets/Screenshot 2026-01-09 012226.png";
+import wed from "../assets/wed2.png";
+import ecom from "../assets/ecom2.png";
+import ecom2 from "../assets/ecom-1.png";
+import img9 from "../assets/pro1.png";
+import chatapp from "../assets/chatapp.png";
+import temp from "../assets/temp.png";
 
 const ProjectSection = () => {
   // --- LOGIC: UNTOUCHED ---
   const projects = [
     {
-      title: "Soil Monitoring",
+      title: "Soil Santinel",
       description: "A real-time soil condition monitoring system with dark mode UI and Django backend.",
       tags: ["Html", "Tailwind", "Dark Mode", "Django", "Sqlite", "Animation"],
       demoUrl: "https://soil-monitoring.onrender.com/",
-      githubUrl: "https://github.com/yanayem",
+      githubUrl: "#",
       image: img6,
     },
     {
-      title: "Hospital Management",
+      title: "Hospital Management System",
       description: "A web-based system for managing hospital appointments, patient records, and doctor scheduling.",
       tags: ["Html", "Tailwind", "Django", "Sqlite", "Animation"],
       demoUrl: "https://hospital-appointment-and-patient.onrender.com/",
       githubUrl: "#",
       image: img7,
+    },
+    {
+      title: "Employee Management System",
+      description: "A comprehensive employee management system designed to manage employee records, roles, attendance, and organizational workflows efficiently.",
+      tags: ["Html", "Tailwind", "Django", "Sqlite", "Animation"],
+      demoUrl: "https://employee-management-system-employee-and.onrender.com/",
+      githubUrl: "#",
+      image: img8,
+    },
+    {
+      title: "Wedding Management System (ongoing)",
+      description: "Digital platform for managing wedding events, guest lists, and vendor coordination.",
+      tags: ["Html", "Tailwind", "NodeJs", "MongoDB", "Animation"],
+      demoUrl: "https://weddingflow.vercel.app/",
+      githubUrl: "https://github.com/yanayem/weddingflow-Wedding-management-system",
+      image: wed,
+    },
+    {
+      title: "AI Soil Analysis, crop Suggestion and Realtime Weather Update ",
+      description: "Weather update and crop suggestion system using AI and real-time data for farmers.",
+      tags: ["Html", "Tailwind", "Python", "API", "AI Model", "Animation"],
+      demoUrl: "https://soilmonitor.onrender.com/",
+      githubUrl: "https://github.com/yanayem/AI-Analyzes-Soil-and-Provides-Crop-Advice",
+      image: temp,
+    },
+    {
+      title: "E-commerce Website for Clothing Brand",
+      description: "Responsive e-commerce platform with product catalog, shopping cart, secure payment, and user accounts.",
+      tags: ["Html", "Tailwind", "ReactJS", "Animation"],
+      demoUrl: "https://sopper-e-com-project.vercel.app/",
+      githubUrl: "https://github.com/yanayem/sopper_e_com_project",
+      image: ecom,
+    },
+    {
+      title: "Real-time Chat Application (ongoing)",
+      description: "Chat application with real-time messaging, user authentication, and responsive design.",
+      tags: ["Html", "Tailwind", "NodeJs", "MongoDB", "Animation"],
+      demoUrl: "#",
+      githubUrl: "https://github.com/yanayem/realtimechat",
+      image: chatapp,
+    },
+    {
+      title: "E-commerce Website for Tech Brand (ongoing)",
+      description: "Responsive e-commerce platform with product catalog, shopping cart, secure payment, and user accounts.",
+      tags: ["Html", "Tailwind", "ReactJS", "Animation"],
+      demoUrl: "https://ecommerce-project-ii.vercel.app/",
+      githubUrl: "https://github.com/yanayem/EcommerceProject-II",
+      image: ecom2,
+    },
+    {
+      title: "Project - I",
+      description: "Full-stack React & Tailwind project with modern UI/UX, responsive layout, and reusable components.",
+      tags: ["Html", "Tailwind", "ReactJS", "Animation"],
+      demoUrl: "https://project-positivus-delta.vercel.app/",
+      githubUrl: "https://github.com/yanayem/project-Positivus",
+      image: img9,
     },
     {
       title: "Pet Shop",
@@ -95,7 +158,7 @@ const ProjectSection = () => {
 
   // --- UI: MODERNIZED CSS ---
   return (
-    <section id="projects" className="relative py-32 overflow-hidden bg-[#fafafa] dark:bg-[#030712] transition-colors duration-500">
+    <section id="projects" className="relative py-32 overflow-hidden  bg-gray-100/70 dark:bg-gray-800/30 transition-colors duration-500">
       
       {/* 2050 Background Ambient Glows */}
       <div className="absolute top-0 -left-20 w-96 h-96 bg-blue-500/10 blur-[120px] rounded-full" />

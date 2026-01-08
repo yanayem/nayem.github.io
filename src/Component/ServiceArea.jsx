@@ -18,7 +18,7 @@ const plans = {
     {
       name: "Pro",
       desc: "For those who want to take it to the next level",
-      price: "$8",
+      price: "$25",
       span: "Save $50 a year",
       features: [
         "2 Users",
@@ -31,7 +31,7 @@ const plans = {
     {
       name: "Business",
       desc: "Unveil new superpowers and join the Design League",
-      price: "$16",
+      price: "$50",
       features: [
         "All the features of Pro plan",
         "Account Success Manager",
@@ -57,7 +57,7 @@ const plans = {
     {
       name: "Pro",
       desc: "For those who want to take it to the next level",
-      price: "$80",
+      price: "$150",
       span: "Save $50 a year",
       features: [
         "2 Users",
@@ -70,7 +70,7 @@ const plans = {
     {
       name: "Business",
       desc: "Unveil new superpowers and join the Design League",
-      price: "$160",
+      price: "$250",
       features: [
         "All the features of Pro plan",
         "Account Success Manager",
