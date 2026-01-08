@@ -1,9 +1,15 @@
-import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useState, useEffect } from "react";
 import { cn } from "../lib/utils";
 
 const SkillSection = () => {
   const [activeCategory, setActiveCategory] = useState("all");
+  const [isAnimate, setIsAnimate] = useState(false);
+
+  useEffect(() => {
+    // Small timeout to trigger the bar fill animation after render
+    const timer = setTimeout(() => setIsAnimate(true), 100);
+    return () => clearTimeout(timer);
+  }, [activeCategory]);
 
   const skills = [
     { name: "HTML/CSS", level: 95, category: "frontend" },
@@ -33,25 +39,34 @@ const SkillSection = () => {
     : skills.filter((skill) => skill.category.includes(activeCategory));
 
   return (
-    <section id="skills" className="py-24 px-6 bg-background">
-      <div className="container mx-auto max-w-6xl">
-        
+    <section id="skills" className="py-24 px-6 bg-transparent relative overflow-hidden">
+      {/* High-Contrast Mesh Background for Glass Effect */}
+      <div className="absolute top-0 -left-1/4 w-1/2 h-1/2 bg-primary/20 blur-[160px] rounded-full" />
+
+      <div className="absolute bottom-0 -right-1/4 w-1/2 h-1/2 bg-indigo-400/20 blur-[260px] rounded-full shadow-[0_0_150px_50px_rgba(79,70,229,0.3)] pointer-events-none" />
+
+      <div className="container mx-auto max-w-6xl relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">My <span className="text-glow">Skills</span></h2>
-          <div className="h-1 w-16 bg-primary mx-auto rounded-full" />
+          <h2 className="text-4xl font-black mb-4 tracking-tighter gap-2 text-white">
+            Technical  <span className="ml-2 text-transparent bg-clip-text bg-gradient-to-r from-primary to-indigo-400"> Proficiency</span>
+          </h2>
+          <div className="h-1 w-24 bg-gradient-to-r from-primary to-indigo-500 mx-auto shadow-[0_0_150px_50px_rgba(79,70,229,0.3)] rounded-full" />
         </div>
 
         {/* Categories Navigation */}
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
+        <div className="flex flex-wrap justify-center gap-3 mb-16">
           {categories.map((cat) => (
             <button
               key={cat}
-              onClick={() => setActiveCategory(cat)}
+              onClick={() => {
+                setIsAnimate(false);
+                setActiveCategory(cat);
+              }}
               className={cn(
-                "px-6 py-2 rounded-full text-sm font-bold transition-all duration-200 capitalize border",
+                "px-6 py-2 rounded-xl text-xs font-bold transition-all duration-300 capitalize border",
                 activeCategory === cat
-                  ? "bg-primary text-white border-primary shadow-lg"
-                  : "bg-card/50 text-muted-foreground border-border hover:border-primary/40"
+                  ? "bg-white/10 text-primary border-primary/50 backdrop-blur-md shadow-[0_0_20px_rgba(var(--primary),0.1)]"
+                  : "bg-transparent text-slate-200 border-white/5 hover:border-white/20 hover:text-white"
               )}
             >
               {cat}
@@ -59,39 +74,49 @@ const SkillSection = () => {
           ))}
         </div>
 
-        {/* FIXED GRID: min-height prevents the page from jumping */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 min-h-[500px] content-start">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={activeCategory} // Forces a fresh start for the whole grid
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.2 }}
-              className="contents" // Grid child wrapper
+        {/* ULTRA GLASS GRID */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredSkills.map((skill) => (
+            <div
+              key={skill.name}
+              className="group  relative p-8 rounded-[2.5rem] border border-white/10 bg-white/[0.03] hover:bg-white/[0.07] hover:border-white/20 transition-all duration-500"
             >
-              {filteredSkills.map((skill) => (
-                <div 
-                  key={skill.name}
-                  className="glass-card p-6 h-fit border border-border/50 hover:border-primary/50 transition-colors"
-                >
-                  <div className="flex justify-between items-center mb-4">
-                    <h3 className="font-bold text-foreground">{skill.name}</h3>
-                    <span className="text-xs font-mono font-bold text-primary bg-primary/10 px-2 py-1 rounded">
+              {/* Transparent Glass Hover Effect */}
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-700 rounded-[2.5rem] 
+            bg-gradient-to-br from-white/[0.08] to-transparent 
+          ring-1 ring-inset ring-white/20 
+          shadow-[inset_0_1px_1px_rgba(255,255,255,0.2)]"
+              />
+
+              <div className="relative z-10">
+                <div className="flex justify-between items-center mb-6">
+                  <h3 className="font-bold text-xl text-white/90 group-hover:text-white transition-colors">
+                    {skill.name}
+                  </h3>
+                  <div className="px-3 py-1 bg-white/5 rounded-lg border border-white/10">
+                    <span className="text-xs md:text-sm font-black font-mono text-primary">
                       {skill.level}%
                     </span>
                   </div>
-                  
-                  <div className="w-full bg-muted/40 h-1.5 rounded-full overflow-hidden">
-                    <div 
-                      className="h-full bg-primary rounded-full transition-all duration-1000"
-                      style={{ width: `${skill.level}%` }}
-                    />
+                </div>
+
+                {/* Highlighted Level Bar */}
+                <div className="relative w-full bg-black/40 h-3.5 rounded-2xl p-[3px] border border-white/5 shadow-inner">
+                  <div
+                    className="h-full rounded-2xl transition-all duration-[1800ms] ease-[cubic-bezier(0.34,1.56,0.64,1)] relative"
+                    style={{
+                      width: isAnimate ? `${skill.level}%` : "0%",
+                      background: `linear-gradient(90deg, #4f46e5 0%, #06b6d4 100%)`, // Indigo to Cyan highlight
+                      boxShadow: '0 0 20px rgba(79, 70, 229, 0.6), inset 0 1px 1px rgba(255,255,255,0.3)'
+                    }}
+                  >
+                    {/* Animated Reflection Line */}
+                    <div className="absolute top-0 left-0 w-full h-[1px] bg-white/30 rounded-full" />
                   </div>
                 </div>
-              ))}
-            </motion.div>
-          </AnimatePresence>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

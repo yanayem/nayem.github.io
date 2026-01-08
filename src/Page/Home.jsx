@@ -16,7 +16,7 @@ const Home = () => {
     <div className="relative min-h-screen bg-background text-foreground transition-colors duration-500">
       
       {/* Theme Toggle - Fixed and High Z-Index */}
-      <div className="fixed top-24 right-6 z-[60] md:top-6 md:right-10">
+      <div className="hidden md:block fixed top-24 right-6 z-[60] md:top-6 md:right-10">
         <ThemeToggle />
       </div>
 
