@@ -5,7 +5,7 @@ import Navbar from "../Component/NavBar";
 import HeroSection from "../Component/HeroSection";
 import AboutMe from "../Component/AboutMe";
 import SkillSection from "../Component/SkillSection";
-import SeviceArea from "../Component/ServiceArea";
+//import SeviceArea from "../Component/ServiceArea";
 import ProjectSection from "../Component/ProjectSection";
 import ScrollToTop from "../Component/ScrollToTop";
 import ContactSection from "../Component/ContactSection";
@@ -27,7 +27,7 @@ const Home = () => {
         <HeroSection />
         <AboutMe />
         <SkillSection />
-        <SeviceArea />
+       {/*  <SeviceArea /> */}
         <ProjectSection />
         <ContactSection />
       </main>
