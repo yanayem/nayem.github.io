@@ -36,7 +36,7 @@ const Navbar = () => {
     { name: "Home", href: "#hero", id: "hero", icon: <Home size={20} /> },
     { name: "About", href: "#about", id: "about", icon: <User size={20} /> },
     { name: "Skills", href: "#skills", id: "skills", icon: <Cpu size={20} /> },
-    { name: "Service", href: "#service", id: "service", icon: <Briefcase size={20} /> },
+   // { name: "Service", href: "#service", id: "service", icon: <Briefcase size={20} /> },
     { name: "Projects", href: "#projects", id: "projects", icon: <Code size={20} /> },
     { name: "Contact", href: "#contact", id: "contact", icon: <Mail size={20} /> },
   ], []);

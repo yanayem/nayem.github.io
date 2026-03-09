@@ -72,14 +72,14 @@ const AboutMe = () => {
 
             {/* Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 px-4">
-              <button
-                onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+              <a
+                href="https://yanayem.vercel.app/"
                 className="group relative rounded-full px-8 py-3 bg-primary text-white font-bold transition-all hover:shadow-[0_0_20px_rgba(var(--primary-rgb),0.3)] hover:scale-105 active:scale-95"
               >
-                Get In Touch
-              </button>
+                Education Profile
+              </a>
               <a
-                href="#"
+                href="https://1drv.ms/b/c/4b83bb33d9e6a435/IQDzQluQSwtfRojgMjUgu6sRAYZ9fr6HbtB-Mk2Xwj_y_-Q?e=qbEDmT"
                 className="px-8 py-3 rounded-full border border-primary text-primary font-bold hover:bg-primary/5 transition-all text-center"
               >
                 Download CV
